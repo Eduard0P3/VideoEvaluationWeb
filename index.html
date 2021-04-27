@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/checkout/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+    <script src="./Js/sentencias.js"></script>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    <title>Formulario de evaluacion de calidad de video</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Css/form-validation.css" rel="stylesheet">
+</head>
+
+<body style="background-color:#808080;">
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2>Formulario de evaluacion de calidad de video</h2>
+            <p class="lead">A continuacion se dispondran una serie de secuencias de video para su calificacion,
+                las secuencias vienen en pares, donde la primera secuencia presentada corresponde a una secuencia
+                original y la secuencia siguiente corresponde a una degradacion de la secuencia original. Al final
+                de cada presentación por pares debe usted evaluar la degradación de la segunda secuencia con respecto
+                a la primera.
+                <br><br>Expresará su apreciación utilizando la siguiente escala:
+                <br>1. Muy molesta.<br>2. Molesta.<br>3. Ligeramente molesta.<br>4. Perceptible pero no molesta.
+                <br>5. Imperceptible.<br>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-12 order-md-1">
+                <form class="needs-validation" novalidate="" id="formulario">
+                    <h4 class="mb-3">Secuencia 1</h4>
+                    <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="768" height="432"
+                        data-setup="{}" poster="./Other_files/764x432.jpg">
+                        <source src="../../../Data/pa1_25fps.mp4" type="video/mp4" />
+                        <source src="MY_VIDEO.webm" type="video/webm" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="v1_1" name="sequence1" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v1_1">1. Muy molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v1_2" name="sequence1" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v1_2">2. Molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v1_3" name="sequence1" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v1_3">3. Ligeramente molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v1_4" name="sequence1" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v1_4">4. Perceptible pero no molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v1_5" name="sequence1" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v1_5">5. Imperceptible.</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Secuencia 2</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="v2_1" name="sequence2" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v2_1">1. Muy molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v2_2" name="sequence2" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v2_2">2. Molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v2_3" name="sequence2" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v2_3">3. Ligeramente molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v2_4" name="sequence2" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v2_4">4. Perceptible pero no molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v2_5" name="sequence2" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v2_5">5. Imperceptible.</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Secuencia 3</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="v3_1" name="sequence3" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v3_1">1. Muy molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v3_2" name="sequence3" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v3_2">2. Molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v3_3" name="sequence3" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v3_3">3. Ligeramente molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v3_4" name="sequence3" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v3_4">4. Perceptible pero no molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v3_5" name="sequence3" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v3_5">5. Imperceptible.</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Secuencia 4</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="v4_1" name="sequence4" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v4_1">1. Muy molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v4_2" name="sequence4" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v4_2">2. Molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v4_3" name="sequence4" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v4_3">3. Ligeramente molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v4_4" name="sequence4" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v4_4">4. Perceptible pero no molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v4_5" name="sequence4" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v4_5">5. Imperceptible.</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Secuencia 5</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="v5_1" name="sequence5" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v5_1">1. Muy molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v5_2" name="sequence5" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v5_2">2. Molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v5_3" name="sequence5" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v5_3">3. Ligeramente molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v5_4" name="sequence5" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v5_4">4. Perceptible pero no molesta.</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="v5_5" name="sequence5" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="v5_5">5. Imperceptible.</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <button class="btn btn-info btn-lg btn-block" type="submit">Grabar y enviar la evaluacion</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1 text-light">© 2017-2021 VQA-Tesis</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-warning" href="#top">Privacy</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="#top">Terms</a></li>
+                <li class="list-inline-item"><a class="text-warning" href="#top">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="./Js/jquery-3.2.1.slim.min.js.descarga" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="./Js/popper.min.js.descarga"></script>
+    <script src="./Js/"></script>
+    <script src="./Js/holder.min.js.descarga"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script> -->
+
+
+</body>
+
+</html>
