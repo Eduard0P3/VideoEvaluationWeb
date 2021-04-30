@@ -21,7 +21,7 @@
 
 <body style="background-color:#808080;">
   <div class="container">
-    <div class="py-5 text-center">
+    <div class="py-5 text-justify text-center">
       <h2>Formulario de evaluacion de calidad de video</h2>
       <p class="lead">A continuacion se dispondran una serie de secuencias de video para su calificacion,
         las secuencias vienen en pares, donde la primera secuencia presentada corresponde a una secuencia
@@ -29,8 +29,7 @@
         de cada presentación por pares debe usted evaluar la degradación de la segunda secuencia con respecto
         a la primera.
         <br><br>Exprese su apreciación utilizando la siguiente escala:
-        <br>1. Muy molesta.<br>2. Molesta.<br>3. Ligeramente molesta.<br>4. Perceptible pero no molesta.
-        <br>5. Imperceptible.<br>
+        <br>1. Muy molesta. 2. Molesta. 3. Ligeramente molesta. 4. Perceptible pero no molesta. 5. Imperceptible.<br>
       </p>
     </div>
     <div class="row">
@@ -38,6 +37,8 @@
         <form class="needs-validation" novalidate="" id="formulario"></form>
         <script src="./Js/sentencias.js"></script>
         <input class='btn btn-info btn-lg btn-block' name="btnEnviar" type='button' id="btnEnviar" value="Grabar y enviar la evaluacion" placeholder="Grabar y enviar la evaluacion" onclick="Enviar()"></input>
+        <input class='btn btn-info btn-lg btn-block' name="btnTest" type='button' id="btnTest" value="Test" placeholder="Test" onclick="displayRadioValue()"></input>
+        <div id="result"></div>
       </div>
     </div>
     <footer class="my-5 pt-5 text-muted text-center text-small">
