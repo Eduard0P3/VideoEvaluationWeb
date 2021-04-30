@@ -6,6 +6,6 @@ function Sentencia() {
     }
     CodigoHTML += "<button class='btn btn-info btn-lg btn-block' type='submit'>Grabar y enviar la evaluacion</button>";
     console.log(CodigoHTML);
-    // document.getElementById("formulario").innerHTML = CodigoHTML;
+    document.getElementById("formulario").innerHTML = CodigoHTML;
 }
 Sentencia();
