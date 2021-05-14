@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/checkout/ -->
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,12 +11,15 @@
   <link href="./Css/video-js.css" rel="stylesheet" />
   <script src="./Js/video.min.js"></script>
   <title>Formulario de evaluacion de calidad de video</title>
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+  <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/"> -->
   <!-- Bootstrap core CSS -->
   <link href="./Css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="./Css/form-validation.css" rel="stylesheet">
-  <script src="./Js/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
 </head>
 
 <body style="background-color:#808080;">
@@ -35,12 +38,12 @@
     <div class="row">
       <div class="col-md-12 order-md-1">
         <form class="needs-validation" novalidate="" id="formulario"></form>
-        <script src="./Js/sentencias.js"></script>
-        <input class='btn btn-info btn-lg btn-block' name="btnEnviar" type='button' id="btnEnviar" value="Grabar y enviar la evaluacion" placeholder="Grabar y enviar la evaluacion" onclick="Enviar()"></input>
-        <input class='btn btn-info btn-lg btn-block' name="btnTest" type='button' id="btnTest" value="Test" placeholder="Test" onclick="displayRadioValue()"></input>
-        <div id="result"></div>
+        <script src="./Js/evaluacion.js"></script>
+        <input class='btn btn-info btn-lg btn-block' name="btnEnviar" type='button' id="btnEnviar" value="Grabar y enviar la evaluacion" placeholder="Grabar y enviar la evaluacion" onclick="getDatos()"></input>
+        <!-- <input class='btn btn-info btn-lg btn-block' name="btnTest" type='button' id="btnTest" value="Test" placeholder="Test" onclick="displayRadioValue(), getDatos()"></input> -->
       </div>
     </div>
+    <div id="result"></div>
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <p class="mb-1 text-light">© 2017-2021 VQA-Tesis</p>
       <ul class="list-inline">
