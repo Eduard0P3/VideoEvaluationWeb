@@ -1,3 +1,9 @@
+function todo() {
+    getDatos();
+    clear();
+    DisableNextButton("btnEnviar");
+}
+
 function Sentencia() {
     var j = 1;
     var CodigoHTML="";
@@ -22,6 +28,24 @@ function displayRadioValue() {
                         + ele[i].value + "<br>";
         }
     }
+}
+
+function clear() {
+    clearRadioGroup("sequence1");
+    clearRadioGroup("sequence2");
+    clearRadioGroup("sequence3");
+    clearRadioGroup("sequence4");
+    clearRadioGroup("sequence5");
+}
+
+function clearRadioGroup(GroupName) {
+    var ele = document.getElementsByName(GroupName);
+	for(var i=0;i<ele.length;i++)
+    ele[i].checked = false;
+}
+
+function DisableNextButton(btnId) {
+    document.getElementById(btnId).disabled = 'true';
 }
 
 function getDatos() {
