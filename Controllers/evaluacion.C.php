@@ -24,7 +24,10 @@ try {
     } else {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-    
+
+    // $MAC = exec('getmac');
+    // $MAC = strtok($MAC, ' ');
+
     $nombre1 = $_POST['nombre1'];
     $nombre2 = $_POST['nombre2'];
     $nombre3 = $_POST['nombre3'];
@@ -65,7 +68,7 @@ try {
 
     //Content
     $mail->isHTML(true); //Set email format to HTML
-    $mail->Subject = 'Nueva evaluacion subjetiva enviada';
+    $mail->Subject = 'Nueva evaluacion subjetiva enviada de direccion IP:'.$ip.'.;
     $mail->Body = '
     <h2>Formulario de evaluacion de calidad de video</h2></br></br>
     <h3><b>Direccion de IP de evaluacion: </b>'.$ip.'</h3></br></br>
