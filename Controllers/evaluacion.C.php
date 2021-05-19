@@ -68,7 +68,7 @@ try {
 
     //Content
     $mail->isHTML(true); //Set email format to HTML
-    $mail->Subject = 'Nueva evaluacion subjetiva enviada de direccion IP:'.$ip.'.;
+    $mail->Subject = 'Nueva evaluacion subjetiva enviada de direccion IP:'.$ip.'.';
     $mail->Body = '
     <h2>Formulario de evaluacion de calidad de video</h2></br></br>
     <h3><b>Direccion de IP de evaluacion: </b>'.$ip.'</h3></br></br>
