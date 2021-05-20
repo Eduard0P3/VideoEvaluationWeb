@@ -4,16 +4,6 @@ function todo() {
     DisableNextButton("btnEnviar");
 }
 
-function Sentencia() {
-    var j = 1;
-    var CodigoHTML="";
-    for (var i = 1; i < 6; i++) {
-        CodigoHTML += "<h4 class='mb-3'>Secuencia "+i+"</h4><video id='video"+i+"' class='video-js vjs-big-play-centered' controls preload='auto' width='768' height='432'    data-setup='{}' poster='./Other_files/764x432.jpg'>    <source src='./Other_files/Data/pa1_25fps.mp4' type='video/mp4' />    <p class='vjs-no-js'>        To view this video please enable JavaScript, and consider upgrading to a        web browser that        <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>    </p></video><div class='d-block my-3'>    <div class='custom-control custom-radio'>        <input id='v"+i+"_"+j+"' name='sequence"+i+"' type='radio' class='custom-control-input' required='' value='1'>        <label class='custom-control-label' for='v"+i+"_"+j+"'>1. Múy distorsionada.</label>    </div>    <div class='custom-control custom-radio'>        <input id='v"+i+"_"+(j+1)+"' name='sequence"+i+"' type='radio' class='custom-control-input' required='' value ='2'>        <label class='custom-control-label' for='v"+i+"_"+(j+1)+"'>2. Distorsionada.</label>    </div>    <div class='custom-control custom-radio'>        <input id='v"+i+"_"+(j+2)+"' name='sequence"+i+"' type='radio' class='custom-control-input' required='' value ='3'>        <label class='custom-control-label' for='v"+i+"_"+(j+2)+"'>3. Ligeramente distorsionada.</label>    </div>    <div class='custom-control custom-radio'>        <input id='v"+i+"_"+(j+3)+"' name='sequence"+i+"' type='radio' class='custom-control-input' required='' value ='4'>        <label class='custom-control-label' for='v"+i+"_"+(j+3)+"'>4. Perceptible, con mínima distorsión.</label>    </div>    <div class='custom-control custom-radio'>        <input id='v"+i+"_"+(j+4)+"' name='sequence"+i+"' type='radio' class='custom-control-input' required='' value ='5'>        <label class='custom-control-label' for='v"+i+"_"+(j+4)+"'>5. Sin distorsión.</label>    </div></div><hr class='mb-4'>";
-    }
-    document.getElementById("formulario").innerHTML = CodigoHTML;
-}
-Sentencia();
-
 function displayRadioValue() {
     document.getElementById("result").innerHTML = "";
     var ele = document.getElementsByTagName("input");
@@ -66,6 +56,7 @@ function getDatos() {
             evaluacion[i]['nombre'] = nombre[i].src;
         }
     }
+    var secuencias = document.getElementsByTagName("h4");
     var evaluacion2 = {
         'nombre1': evaluacion[0]['nombre'],
         'nombre2': evaluacion[1]['nombre'],
@@ -76,7 +67,13 @@ function getDatos() {
         'valor2' : evaluacion[1]['valor'],
         'valor3' : evaluacion[2]['valor'],
         'valor4' : evaluacion[3]['valor'],
-        'valor5' : evaluacion[4]['valor']
+        'valor5' : evaluacion[4]['valor'],
+        'evaluador' : $('#evaluador').val(),
+        'secuencia1' : secuencias[0].innerText,
+        'secuencia2' : secuencias[1].innerText,
+        'secuencia3' : secuencias[2].innerText,
+        'secuencia4' : secuencias[3].innerText,
+        'secuencia5' : secuencias[4].innerText
     }
     $.ajax({
         data: evaluacion2, //datos que se van a enviar al ajax

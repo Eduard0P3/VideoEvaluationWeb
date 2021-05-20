@@ -38,6 +38,12 @@ try {
     $valor3 = $_POST['valor3'];
     $valor4 = $_POST['valor4'];
     $valor5 = $_POST['valor5'];
+    $secuencia1 = $_POST['secuencia1'];
+    $secuencia2 = $_POST['secuencia2'];
+    $secuencia3 = $_POST['secuencia3'];
+    $secuencia4 = $_POST['secuencia4'];
+    $secuencia5 = $_POST['secuencia5'];
+    $evaluador = $_POST['evaluador'];
     $respuesta['Ip'] = $ip;
     // $respuesta['respuesta'] = 'Su IP parece ser: ' . $ip;
 
@@ -72,16 +78,16 @@ try {
     $mail->Body = '
     <h2>Formulario de evaluacion de calidad de video</h2></br></br>
     <h3><b>Direccion de IP de evaluacion: </b>'.$ip.'</h3></br></br>
-    <h3><b>Secuencia 1: </b>'.$nombre1.'</h3></br>
-    <h3><b>Puntaje 1: </b>'.$valor1.'</h3></br></br>
-    <h3><b>Secuencia 2: </b>'.$nombre2.'</h3></br>
-    <h3><b>Puntaje 2: </b>'.$valor2.'</h3></br></br>
-    <h3><b>Secuencia 3: </b>'.$nombre3.'</h3></br>
-    <h3><b>Puntaje 3: </b>'.$valor3.'</h3></br></br>
-    <h3><b>Secuencia 4: </b>'.$nombre4.'</h3></br>
-    <h3><b>Puntaje 4: </b>'.$valor4.'</h3></br></br>
-    <h3><b>Secuencia 5: </b>'.$nombre5.'</h3></br>
-    <h3><b>Puntaje 5: </b>'.$valor5.'</h3></br></br>
+    <h3><b>'.$secuencia1.': </b>'.$nombre1.'</h3></br>
+    <h3><b>Puntaje: </b>'.$valor1.'</h3><hr></br></br>
+    <h3><b>'.$secuencia2.': </b>'.$nombre2.'</h3></br>
+    <h3><b>Puntaje: </b>'.$valor2.'</h3><hr></br></br>
+    <h3><b>'.$secuencia3.': </b>'.$nombre3.'</h3></br>
+    <h3><b>Puntaje: </b>'.$valor3.'</h3><hr></br></br>
+    <h3><b>'.$secuencia4.': </b>'.$nombre4.'</h3></br>
+    <h3><b>Puntaje: </b>'.$valor4.'</h3><hr></br></br>
+    <h3><b>'.$secuencia5.': </b>'.$nombre5.'</h3></br>
+    <h3><b>Puntaje: </b>'.$valor5.'</h3><hr></br></br>
     ';
 
     $mail->send();
